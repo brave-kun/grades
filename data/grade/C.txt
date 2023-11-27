@@ -1,2 +1,4 @@
 2 C t tom a jack 92
 2 C t tom a1 jack1 55
+2 C t tom a2 jack2 77
+2 C t tom a3 jack3 87

@@ -19,7 +19,7 @@ public class StudentsPanel extends JFrame implements ActionListener {
 	 */
 	JPanel contain;
 	String id;
-	JButton infoButton, gradeButton, courseButton, editButton, logOut, selectCourseButton, deleteCourseButton,classTableButton;
+	JButton infoButton, gradeButton, courseButton, editButton, logOut, selectCourseButton, deleteCourseButton,classTableButton, examButton;
 
 	public StudentsPanel(String id) {
 		super("学生");
@@ -35,6 +35,7 @@ public class StudentsPanel extends JFrame implements ActionListener {
 		editButton = new JButton("修改信息");
 		selectCourseButton = new JButton("选课");
 		deleteCourseButton = new JButton("退课");
+		examButton = new JButton("查看考试");
 		classTableButton = new JButton("查看课表");
 		logOut = new JButton("退出登录");
 		infoButton.setBounds(70, 40, 140, 30);
@@ -44,7 +45,8 @@ public class StudentsPanel extends JFrame implements ActionListener {
 		selectCourseButton.setBounds(70, 200, 140, 30);
 		deleteCourseButton.setBounds(70, 240, 140, 30);
 		classTableButton.setBounds(70, 280, 140, 30);
-		logOut.setBounds(70, 320, 140, 30);
+		examButton.setBounds(70, 320, 140, 30);
+		logOut.setBounds(70, 360, 140, 30);
 
 		contain.add(infoButton);
 		infoButton.addActionListener(this);
@@ -60,6 +62,8 @@ public class StudentsPanel extends JFrame implements ActionListener {
 		deleteCourseButton.addActionListener(this);
 		contain.add(classTableButton);
 		classTableButton.addActionListener(this);
+		contain.add(examButton);
+		examButton.addActionListener(this);
 		contain.add(logOut);
 		logOut.addActionListener(this);
 		setVisible(true);
@@ -91,6 +95,9 @@ public class StudentsPanel extends JFrame implements ActionListener {
 		}
 		if (e.getSource() == classTableButton){
 			new ClassTable(id);
+		}
+		if (e.getSource() == examButton) {
+			new ExamView(id, 0);
 		}
 	}
 
