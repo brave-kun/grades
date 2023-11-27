@@ -14,7 +14,7 @@ import java.util.ArrayList;
  * ÈÕÆÚ£º 2023/11/24 11:14
  */
 
-public class SelectCourse extends JFrame implements ActionListener {
+public class StuSelectCourse extends JFrame implements ActionListener {
 
 
     String stuId;
@@ -23,7 +23,7 @@ public class SelectCourse extends JFrame implements ActionListener {
     JLabel courseId, courseName, teacherId, teacherName;
     JTextField courseIdT, courseNameT, teacherIdT, teacherNameT;
 
-    public SelectCourse(String stuId) {
+    public StuSelectCourse(String stuId) {
         super("Ñ¡¿Î");
         this.stuId = stuId;
         setSize(400, 450);
@@ -107,7 +107,7 @@ public class SelectCourse extends JFrame implements ActionListener {
                         e1.printStackTrace();
                     }
 
-                    modifiedContent.add(courseIdT.getText() + " " + courseNameT.getText() + " " + stuId + " " + teacherIdT.getText() + " " + teacherNameT.getText());
+                    modifiedContent.add(courseIdT.getText() + " " + courseNameT.getText() + " " + stuId + " " + teacherIdT.getText() + " " + teacherNameT.getText() + " " + number);
 
                     try {
                         FileWriter fw = new FileWriter(csFile);

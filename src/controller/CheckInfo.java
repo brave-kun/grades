@@ -33,4 +33,51 @@ public class CheckInfo {
 
 		return 0;
 	}
+
+
+
+
+	public int isExam(String table, String id) {
+
+		String file = System.getProperty("user.dir")+"/data".concat("/").concat(table).concat(".txt");
+		try{
+			BufferedReader br = new BufferedReader(new FileReader(file));//构造一个BufferedReader类来读取文件
+			String s = null;
+			while((s = br.readLine())!=null){//使用readLine方法，一次读一行
+				String[] result = s.split(" ");
+				if(result[0].equals(id)){
+					return 2;
+				}
+
+			}
+			br.close();
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+
+		return 0;
+	}
+
+	public String isCourse(String table, String id) {
+
+		String file = System.getProperty("user.dir")+"/data".concat("/").concat(table).concat(".txt");
+		try{
+			BufferedReader br = new BufferedReader(new FileReader(file));//构造一个BufferedReader类来读取文件
+			String s = null;
+			while((s = br.readLine())!=null){//使用readLine方法，一次读一行
+				String[] result = s.split(" ");
+				if(result[0].equals(id)){
+					return result[1];
+				}
+
+			}
+			br.close();
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+
+		return "none";
+	}
+
 }
+

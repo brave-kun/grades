@@ -80,10 +80,10 @@ public class StudentsPanel extends JFrame implements ActionListener {
 			new StuEditInfo(id);     ////
 		}
 		if (e.getSource() == selectCourseButton){
-			new SelectCourse(id);
+			new StuSelectCourse(id);
 		}
 		if (e.getSource() == deleteCourseButton){
-			new DeleteCourse(id);
+			new StuDeleteCourse(id);
 		}
 		if(e.getSource() == logOut){
 			this.dispose();

@@ -4,12 +4,7 @@ import java.awt.AWTEvent;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.JTextField;
+import javax.swing.*;
 
 import controller.GradeSort;
 
@@ -116,6 +111,12 @@ public class SortGradeFrame extends JFrame implements ActionListener{
 		JPanel contain = new JPanel();
 		fm.setLocation(600, 400);
 		contain.setLayout(null);
+
+		//JTextArea list;
+
+
+
+
 		
 		JLabel fail = new JLabel("不及格");
 		JLabel pass = new JLabel("及格");
